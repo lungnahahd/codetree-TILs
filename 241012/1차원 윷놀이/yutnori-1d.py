@@ -16,14 +16,16 @@ def play_game(now, result):
     
     now_move = turns[now]
     for idx in range(horse_cnt):
-        before = location[idx]
         if location[idx] != size:
+            before = location[idx]
             location[idx] = min(size, location[idx] + now_move)
             if location[idx] == size:
                 play_game(now+1, result+1)
             else:
                 play_game(now+1, result)
-        location[idx] = before
+            location[idx] = before
+        else:
+            play_game(now+1, result)
 
 
 play_game(0,0)
