@@ -7,7 +7,7 @@ nums = list(map(int, input().split()))
 
 
 
-choice_nums = list(combinations(nums, 3))
+choice_nums = list(combinations(nums, choice_cnt))
 
 answer = 0
 for now in choice_nums:
