@@ -10,5 +10,5 @@ if step < 5:
 else:
     for idx in range(5,step+1):
         jump = answer[idx-3] + answer[idx-2]
-        answer.append(jump)
+        answer.append(jump % 10007)
     print(answer[step])
